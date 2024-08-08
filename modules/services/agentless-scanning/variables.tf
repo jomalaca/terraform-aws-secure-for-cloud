@@ -81,6 +81,12 @@ variable "mgt_stackset" {
   default     = true
 }
 
+variable "max_concurrent_percentage" {
+  type        = number
+  description = "The maximum percentage of accounts in which to perform this operation at one time"
+  default     = 100
+}
+
 variable "failure_tolerance_percentage" {
   type        = number
   description = "The percentage of accounts, per Region, for which stack operations can fail before AWS CloudFormation stops the operation in that Region"
